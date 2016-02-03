@@ -8,18 +8,18 @@ import syslog
 import time
 import util
 import bzlib
-from config import dbhost
-from config import dbslave
-from config import phmanifest_user
-from config import phmanifest_passwd
-from config import phuser_user
-from config import phuser_passwd
-from config import fabmigrate_db
-from config import fabmigrate_user
-from config import fabmigrate_passwd
-from config import bzmigrate_db
-from config import bzmigrate_user
-from config import bzmigrate_passwd
+# from config import dbhost
+# from config import dbslave
+# from config import phmanifest_user
+# from config import phmanifest_passwd
+# from config import phuser_user
+# from config import phuser_passwd
+# from config import fabmigrate_db
+# from config import fabmigrate_user
+# from config import fabmigrate_passwd
+# from config import bzmigrate_db
+# from config import bzmigrate_user
+# from config import bzmigrate_passwd
 
 def get_projectcolumns(dbcon):
     _ = dbcon.sql_x("SELECT id, \
@@ -1445,9 +1445,9 @@ def set_task_subscriber(taskPHID, userPHID):
 
 class phdb:
     def __init__(self,
-                 host = dbhost,
-                 user = phuser_user,
-                 passwd = phuser_passwd,
+                 host,
+                 user,
+                 passwd,
                  db = "phab_migration",
                  charset = 'utf8',):
 
